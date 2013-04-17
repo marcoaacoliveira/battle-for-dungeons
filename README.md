@@ -1,0 +1,1 @@
+O projeto é a criação de um sistema simples pra simular um jogo de RPG, criado em cima das regras do 3D&T. A proposta é que existam personagens, que os personagens estejam em times e que estes  batalhem entre si. 
