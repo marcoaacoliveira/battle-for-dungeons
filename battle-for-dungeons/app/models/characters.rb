@@ -1,8 +1,20 @@
-class Character 
+class Characters
 
-	attr_accessor :name
-	attr_accessor :strength, :skill, :resistance, :armor, :fire_power
+	attr_accessor :name, :strength, :skill, :resistance, :armor, :fire_power
 	
+
+	def attack
+		damage = :strength.times.collect do
+			Die.roll
+		end.inject(:+)
+	end
+
+
+	def defend
+		defense = :skill.times.collect do
+		Die.roll
+		end.inject(:+)
+	end
 	
 	
 end
