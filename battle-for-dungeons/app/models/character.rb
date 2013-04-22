@@ -1,6 +1,7 @@
 class Character
 	#atributos
-	attr_accessor :name, :strength, :skill, :resistance, :armor, :fire_power, :max_health_points
+	attr_accessor :name, :strength, :skill, :resistance, :armor, :fire_power, :current_hp
+	attr_reader :max_hp
 	
 	
 	#incializador
@@ -29,15 +30,18 @@ class Character
 		end.inject(:+)
 	end
 	
+	
+	private
 	#calcular *hp*
 	def calculate_health_points
 		if @resistance == 0
-			@max_health_points = 1
+			@max_hp = 1
 		else
-			@max_health_points = @resistance.times.collect do 
+			@max_hp = @resistance.times.collect do 
 				Die.roll
 			end.inject(:+)
 		end
+		@current_hp = @max_hp 
 	end
 	
 end

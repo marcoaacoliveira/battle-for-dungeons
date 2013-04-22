@@ -10,8 +10,7 @@ class Berserker < Character
 	
 	private
 	def strength_bonus
-		((@strength + 2) > 7) ? @strength + 2 : 7
+		((@strength + 2) < 7) ? @strength + 2 : 7
 	end
-
 end
 
