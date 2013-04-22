@@ -8,3 +8,5 @@ libs = [
 $LOAD_PATH.unshift *Dir.glob(libs)
 
 require "battle_for_dungeons"
+
+@characters = [Berserker.new(:name => "Adrian", :strength => 2, :skill => 1, :armor => 3 )]
